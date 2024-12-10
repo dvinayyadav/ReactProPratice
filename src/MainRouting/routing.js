@@ -41,20 +41,29 @@ import UseEffectHooksComp from "../Hooks/UseEffectHooksComp";
 import MainDashboardComp from "../layout/MainDashboardComp";
 import MyFacColoComp from "../components/MyFacColoComp";
 import FormValComp from "../components/FormValComp";
+import FormValidationTaskComp from "../components/FormValidationTaskComp";
+import ProctDashCompdu from "../CRUD/ProctDashComp";
+import ProtectedRoutingComp from "../MainRouting/ProtectedRouting"
+import Mycorousel from "../components/Mycorousel";
+
 // import LoginComp from "../Layout/LoginComp";
 const routing = createBrowserRouter([
     // { path: "", element: <LoginComp /> },
     // 
-    {
-      path: "MainDashboard",element: <MainDashboardComp />,
-      children: [
-
+    // {
+      // path: "MainDashboard",element: <MainDashboardComp />,
+      {path:"maindashboard",element:<ProtectedRoutingComp Component = {MainDashboardComp} />,children:[
+     
         { path: "usestate", element: <UseStateHooksComp /> },
         { path: "formValidation", element: <FormValComp></FormValComp>},
         { path: "useeffect", element: <UseEffectHooksComp /> },
         { path: "hooks", element: <ReactHooksComp /> },
         {path:"favcolor",element:<MyFacColoComp newColor="Green"></MyFacColoComp>},
-        { path: "virtualdom", element: <VirtualDOM /> }
+        { path: "virtualdom", element: <VirtualDOM /> },
+        { path: "FormValidationTaskComp", element: <FormValidationTaskComp></FormValidationTaskComp> },
+        { path: "ProductEditComp", element: <ProctDashCompdu></ProctDashCompdu> },
+        { path: "Mycorosel", element: <Mycorousel></Mycorousel>}
+
       ]
     },
     // { path: "*", element: <PageNotFound /> }, // Catch-all for 404 pages

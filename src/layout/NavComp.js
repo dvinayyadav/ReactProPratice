@@ -8,7 +8,10 @@ const NavComp = () => {
         <Link to="usestate" className='btn btn-warning btn-sm'>UseState</Link>{" "}
         <Link to="useEffect" className='btn btn-info btn-sm'>useEffect</Link>{" "}
         <Link to="favcolor" className='btn btn-info btn-sm'>FavColor</Link>{" "}
-        <Link to="formValidation" className='btn btn-danger btn-sm'>FormValidation</Link>
+        <Link to="formValidation" className='btn btn-danger btn-sm'>FormValidation</Link>{" "}
+        <Link to="FormValidationTaskComp" className='btn btn-warning btn-sm'>FormValidationTaskComp</Link>{" "}
+        <Link to="ProductEditComp" className='btn btn-warning btn-sm'>ProductEditComp</Link>{" "}
+        <Link to="Mycorosel" className='btn btn-warning btn-sm'>MyCorousel</Link>
     </div>
   )
 }
